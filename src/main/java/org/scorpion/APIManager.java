@@ -1,21 +1,32 @@
 package org.scorpion;
 
-import org.scorpion.api.BaseAPI;
+import de.sunlight.key.ValueKey;
+import org.scorpion.plugin.Plugin;
 
 public class APIManager {
 
-    private final BaseAPI api;
+    private final Plugin api;
+    private final ValueKey<String> key;
 
-    public APIManager(BaseAPI api){
+    public APIManager(Plugin api, ValueKey<String> key) {
         this.api = api;
+        this.key = key;
     }
 
-    public BaseAPI buildAPI(){
+    public Plugin buildAPI() {
         return api;
     }
 
-    public APIManager enable(){
-        api.enable();
+    public ValueKey<String> getKey() {
+        return key;
+    }
+
+    public APIManager init() {
+        return this;
+    }
+
+    public APIManager disable() {
+        api.disable();
         return this;
     }
 

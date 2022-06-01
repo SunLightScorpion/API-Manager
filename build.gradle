@@ -9,8 +9,16 @@ repositories {
 }
 
 dependencies {
+    implementation files('API/ValueKey.jar')
 }
 
+jar {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from(zipTree("API/ValueKey.jar"))
+    from {
+        subprojects.collect { it.sourceSets.main.output }
+    }
+}
 test {
     useJUnitPlatform()
 }
