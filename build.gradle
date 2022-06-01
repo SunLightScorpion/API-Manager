@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'org.scorpion'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+test {
+    useJUnitPlatform()
+}
