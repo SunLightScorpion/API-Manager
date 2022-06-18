@@ -17,7 +17,6 @@ public class Test {
         ManagerLoader loader = new ManagerLoader();
 
         loader.start();
-
         loader.shutdown();
     }
 
