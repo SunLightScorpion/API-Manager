@@ -13,9 +13,9 @@ new api manager for plugins and projects
         loader.shutdown();
     }
 
-========================================================
+You should use "extends Plugin {"
 
-public class APITest extends Plugin {
+========================================================
 
     public APITest() {
         super("test");
