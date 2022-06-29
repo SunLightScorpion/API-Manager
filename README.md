@@ -1,6 +1,6 @@
 # API-Manager
-new api manager for plugins and projects
 
+new api manager for plugins and projects
 
     public static void main(String[] args) {
 
